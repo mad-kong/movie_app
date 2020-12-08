@@ -1,10 +1,9 @@
 import src from '*.avif';
 import React from 'react';
 
-function Food(name, picture){
+function Food({name}){
   return <div>
     <h1>i like {name}</h1>
-    <img src = {picture}/>
   </div>
 } 
 
@@ -22,7 +21,7 @@ const favFood = [
 function App() {
   return (
     <div>
-      {favFood.map(dish =>(
+      {favFood.map(dish => (
         <Food name = {dish.name} picture = {dish.picture} />
       ))}
     </div>
