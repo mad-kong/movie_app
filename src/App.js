@@ -1,31 +1,52 @@
-import src from '*.avif';
-import React from 'react';
+import axios from "axios";
+import React from "react";
+import Movie from "./Movie";
+import "./App.css";
 
-function Food({name}){
-  return <div>
-    <h1>i like {name}</h1>
-  </div>
-} 
-
-const favFood = [
-  {
-    name : "pizza",
-    picture : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Rpv88_S1O-3rILKXcjIJLQHaFn%26pid%3DApi&f=1"
-  },
-  {
-    name : "chicken",
-    picture : "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsiksamenu.co.kr%2Fimages%2Fcpimage%2F707754953_377662.jpg&f=1&nofb=1"
+class App extends React.Component{
+  state = {
+    isLoading : true,
+    movies : []
   }
-]
+  //axios는 시간이 걸리기 때문에 await로 기다려준다.
+  //ex) data.data.movies경우 {data:{data:{movies}}} 로 단축
+  getMovies = async () => {
+    const {data:{data:{movies}}} = await axios.get(
+      "https://yts-proxy.now.sh/list_movies.json?sort_by=rating");
+    //state에 새로운 요소를 하나 만들수있다.
+    this.setState({movies, isLoading : false});
+  };
 
-function App() {
-  return (
-    <div>
-      {favFood.map(dish => (
-        <Food name = {dish.name} picture = {dish.picture} />
-      ))}
-    </div>
-  );
+  componentDidMount(){
+   this.getMovies();
+  };   
+
+  render() {
+    const { isLoading, movies} = this.state;
+    return (
+      <section className = "container">
+        {isLoading ? (
+          <div className = "loader">
+            <span className = "loader__text">Loading...</span>
+          </div>
+        )  :  (   
+          <div className = "movies">
+            {movies.map(movie => (
+            <Movie
+            key = {movie.id}
+            id = {movie.id}
+             year = {movie.year}
+            title = {movie.title}
+            summary = {movie.summary}
+            poster = {movie.small_cover_image}
+            genres = {movie.genres}
+            />
+            ))}
+          </div>
+        )}
+      </section>
+    );
+  }
 }
 
-export default App; 
+export default App;
