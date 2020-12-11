@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/moviea-app/static/css/main.9fac14e8.chunk.css",
-    "main.js": "/moviea-app/static/js/main.08539ea3.chunk.js",
-    "main.js.map": "/moviea-app/static/js/main.08539ea3.chunk.js.map",
-    "runtime-main.js": "/moviea-app/static/js/runtime-main.9ec36a45.js",
-    "runtime-main.js.map": "/moviea-app/static/js/runtime-main.9ec36a45.js.map",
-    "static/js/2.d8ca17b7.chunk.js": "/moviea-app/static/js/2.d8ca17b7.chunk.js",
-    "static/js/2.d8ca17b7.chunk.js.map": "/moviea-app/static/js/2.d8ca17b7.chunk.js.map",
-    "index.html": "/moviea-app/index.html",
-    "static/css/main.9fac14e8.chunk.css.map": "/moviea-app/static/css/main.9fac14e8.chunk.css.map",
-    "static/js/2.d8ca17b7.chunk.js.LICENSE.txt": "/moviea-app/static/js/2.d8ca17b7.chunk.js.LICENSE.txt"
+    "main.css": "/moviea_app/static/css/main.9fac14e8.chunk.css",
+    "main.js": "/moviea_app/static/js/main.08539ea3.chunk.js",
+    "main.js.map": "/moviea_app/static/js/main.08539ea3.chunk.js.map",
+    "runtime-main.js": "/moviea_app/static/js/runtime-main.4822cbc4.js",
+    "runtime-main.js.map": "/moviea_app/static/js/runtime-main.4822cbc4.js.map",
+    "static/js/2.d8ca17b7.chunk.js": "/moviea_app/static/js/2.d8ca17b7.chunk.js",
+    "static/js/2.d8ca17b7.chunk.js.map": "/moviea_app/static/js/2.d8ca17b7.chunk.js.map",
+    "index.html": "/moviea_app/index.html",
+    "static/css/main.9fac14e8.chunk.css.map": "/moviea_app/static/css/main.9fac14e8.chunk.css.map",
+    "static/js/2.d8ca17b7.chunk.js.LICENSE.txt": "/moviea_app/static/js/2.d8ca17b7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9ec36a45.js",
+    "static/js/runtime-main.4822cbc4.js",
     "static/js/2.d8ca17b7.chunk.js",
     "static/css/main.9fac14e8.chunk.css",
     "static/js/main.08539ea3.chunk.js"
